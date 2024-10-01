@@ -4,3 +4,13 @@
   line-height: 32px;
   letter-spacing: -0.03em;
 }
+
+@mixin BasicRadius {
+  border-radius: 12px;
+}
+
+@mixin AlignCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

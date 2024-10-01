@@ -1,8 +1,12 @@
 <template>
-  <div>Agents Page</div>
+  <div class="agent-page">
+    <AgentCard />
+  </div>
 </template>
 
 <script setup>
+import AgentCard from "~/components/FunctionalComponents/Cards/AgentCard.vue";
+
 useSeoMeta({
   title: "Агенты",
   ogTitle: "Агенты",
@@ -10,3 +14,12 @@ useSeoMeta({
   ogDescription: "default",
 });
 </script>
+
+<style scoped lang="scss">
+.agent-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+</style>

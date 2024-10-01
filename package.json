@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/eslint": "^0.5.7",
     "@nuxt/fonts": "^0.9.1",
     "@nuxt/image": "^1.8.0",
     "@primevue/nuxt-module": "^4.0.7",
@@ -26,6 +27,7 @@
   "devDependencies": {
     "@pinia/nuxt": "^0.5.4",
     "@vueuse/nuxt": "^11.1.0",
+    "eslint": "^9.11.1",
     "nuxt-file-storage": "^0.2.7",
     "prettier": "^3.3.3",
     "sass": "^1.79.3"

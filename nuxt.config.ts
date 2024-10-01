@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     "@primevue/nuxt-module",
     "nuxt-file-storage",
     "nuxt-typed-router",
+    "@nuxt/eslint",
   ],
   fonts: {
     families: [{ name: "montserrat", provider: "google" }],
@@ -31,10 +32,18 @@ export default defineNuxtConfig({
   },
   primevue: {
     usePrimeVue: true,
+    components: {
+      include: "*",
+    },
     options: {
       theme: {
         preset: Aura,
       },
+    },
+  },
+  app: {
+    head: {
+      link: [{ rel: "icon", href: "/logo.png" }],
     },
   },
 });

@@ -1,75 +1,21 @@
-# Nuxt 3 Minimal Starter
-
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
-
 ## Setup
 
-Make sure to install the dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+```
+1) Clone the repository.
+2) Install Node.js.
+3) Open the repository in the code editor
+(I recommend using: Visual Studio Code, JetBrains WebStorm).
+4) Open the terminal and run the "npm install" command.
+5) After installing all dependencies, run the "npm run dev" command.
 ```
 
-## Development Server
+# Установка приложения
 
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+1) Клонировать репозиторий.
+2) Установить Node.js.
+3) Открыть репозиторий в редакторе кода
+    ( рекомендую использовать: Visual Studio Code, JetBrains WebStorm ).
+4) Открыть терминал и выполнить команду "npm install".
+5) После установки всех зависимостей выполнить команду "npm run dev".
 ```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

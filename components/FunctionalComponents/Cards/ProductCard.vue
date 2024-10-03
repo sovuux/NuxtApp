@@ -1,11 +1,11 @@
 <template>
   <div class="card">
     <div :style="cardBackgroundStyle" class="card-head">
-      <div class="card-head-label">
+      <div v-if="props.viewsCount" class="card-head-label">
         <i class="pi pi-eye" />
         <span>{{ props.viewsCount }}</span>
       </div>
-      <div class="card-head-label">
+      <div v-if="props.dayCount" class="card-head-label">
         <i class="pi pi-calendar" />
         <span>{{ props.dayCount }}</span>
       </div>
@@ -20,7 +20,7 @@
 </template>
 
 <script setup>
-import CarPng from "public/cardImages/carPng.png";
+import CarPng from "public/cardImages/products/product2.png";
 
 const props = defineProps({
   backgroundImage: {
@@ -49,6 +49,7 @@ const props = defineProps({
   },
 });
 
+//Computed Hook для передачи backgroundImage через props
 const cardBackgroundStyle = computed(() => ({
   backgroundImage: `url(${props.backgroundImage})`,
   backgroundSize: "cover",
@@ -90,6 +91,7 @@ const cardBackgroundStyle = computed(() => ({
     }
     &-description {
       padding-top: 0.5rem;
+      height: 50px;
       font-size: 15px;
       font-weight: 500;
     }

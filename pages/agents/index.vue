@@ -1,6 +1,15 @@
 <template>
   <div class="agent-page">
-    <AgentCard />
+    <AgentCard
+      v-for="agent in companyData.agents"
+      :key="agent.id"
+      :title="agent.name"
+      :logo="agent.logo"
+      :documents="agent.rating.documents"
+      :rating="agent.rating.stars"
+      :feed-back="agent.rating.reviews"
+      :description="agent.description"
+    />
   </div>
 </template>
 
@@ -13,6 +22,8 @@ useSeoMeta({
   description: "default",
   ogDescription: "default",
 });
+
+const { data: companyData } = await useFetch("/api/company");
 </script>
 
 <style scoped lang="scss">

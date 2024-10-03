@@ -18,8 +18,22 @@
       <div class="header-right-notification header-right-item">
         <span> Разместить объявление </span>
       </div>
-      <div class="header-right-profile header-right-item">
-        <i class="pi pi-bars" style="font-size: 1.5rem" />
+      <div
+        class="header-right-profile header-right-item"
+        @click="toggleBurgerMenu"
+      >
+        <i
+          class="pi pi-bars header-right-profile-icon"
+          style="font-size: 1.5rem"
+        >
+          <div
+            class="header-right-profile-dropdown"
+            v-if="isBurgerMenuOpen"
+            @click="store.logout"
+          >
+            Выйти
+          </div>
+        </i>
         <img
           :src="props.headerLogo"
           alt="logo"
@@ -52,6 +66,7 @@ import CartIco from "public/icons/cart.png";
 import MapIco from "public/icons/svg/map.svg";
 import BaseLogo from "public/icons/favicon.ico";
 import { ref } from "vue";
+import { useUserStore } from "~/store/users.store";
 
 const props = defineProps({
   headerLogo: {
@@ -59,6 +74,8 @@ const props = defineProps({
     default: BaseLogo,
   },
 });
+
+const store = useUserStore();
 
 //Бургер меню
 const isBurgerMenuOpen = ref(false);
@@ -132,6 +149,7 @@ function toggleBurgerMenu() {
       cursor: pointer;
     }
     &-profile {
+      user-select: none;
       cursor: pointer;
       display: flex;
       justify-content: space-around;
@@ -145,6 +163,24 @@ function toggleBurgerMenu() {
         background-color: $primary;
         margin-left: 0.5rem;
         border-radius: 50px;
+        width: 50px;
+        height: 50px;
+      }
+      &-icon {
+        position: relative;
+        display: inline-block;
+      }
+      &-dropdown {
+        user-select: none;
+        position: absolute;
+        background-color: #ff3737;
+        border-radius: 12px;
+        color: $primary;
+        min-width: 50px;
+        margin-top: 1rem;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        padding: 6px 8px;
+        z-index: 1;
       }
     }
   }

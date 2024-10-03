@@ -38,6 +38,7 @@
 import { ref } from "vue";
 import Select from "primevue/select";
 
+//Категории Select
 const categories = ref([
   {
     label: null,
@@ -58,7 +59,7 @@ const categories = ref([
     ],
   },
 ]);
-
+//Изначально выбранная категория
 const selectedCategory = ref(categories.value[0].items[0].value);
 </script>
 

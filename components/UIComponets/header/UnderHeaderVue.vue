@@ -93,6 +93,7 @@ const props = defineProps({
   },
 });
 
+//Computed Hook для передачи backgroundImage через props
 const logoBackground = computed(() => ({
   backgroundImage: `url(${props.companyLogo})`,
   backgroundSize: "cover",

@@ -40,7 +40,7 @@
 </template>
 
 <script setup lang="ts">
-import AgentLogo from "~/public/cardImages/agent.png";
+import AgentLogo from "~/public/cardImages/agents/agent1.png";
 import CheckPng from "public/icons/greenCheck.png";
 import StarPng from "~/public/icons/greenStar.png";
 
@@ -72,6 +72,7 @@ const props = defineProps({
   },
 });
 
+//Computed Hook для передачи backgroundImage через props
 const cardBackgroundImage = computed(() => ({
   backgroundImage: `url(${props.logo})`,
   backgroundSize: "cover",

@@ -1,14 +1,15 @@
+//Заголовки
 @mixin Title {
   font-size: 32px;
   font-weight: 500;
   line-height: 32px;
   letter-spacing: -0.03em;
 }
-
+//Скругелние границ
 @mixin BasicRadius {
   border-radius: 12px;
 }
-
+//Выравнивание по центру
 @mixin AlignCenter {
   display: flex;
   justify-content: center;
